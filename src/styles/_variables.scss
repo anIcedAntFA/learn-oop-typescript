@@ -1,15 +1,18 @@
-$clr-primary: #7c1794;
+$clr-primary: #ff9500;
+$clr-secondary: #505050;
+$clr-tertiary: #d4d4d2;
 
 $clr-white: #fff;
 $clr-black: #000;
 
-$clr-bg: #1a051f;
+$clr-bg: #1c1c1c;
 $clr-text: $clr-white;
 
-$clr-btn-number: #332736;
-$clr-btn-function: #5a4e5f;
 $clr-btn-operator: $clr-primary;
-$clr-input: #5a4e5f;
+$clr-btn-number: $clr-secondary;
+$clr-btn-action: $clr-tertiary;
+
+$clr-input: $clr-tertiary;
 $clr-output: $clr-white;
 
 $ff-primary: 'Roboto', sans-serif;

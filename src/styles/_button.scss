@@ -1,4 +1,12 @@
+@use 'sass:color' as clr;
 @use './variables' as *;
+
+@mixin hover-effect($color, $lightness: 15%, $opacity: 1) {
+  &:hover {
+    background-color: clr.adjust($color, $lightness: $lightness);
+    opacity: $opacity;
+  }
+}
 
 .btn {
   display: flex;
@@ -11,28 +19,42 @@
   padding: $spacer-base;
 
   font-size: $fs-xlarge;
-  font-weight: $fw-semibold;
+  font-weight: $fw-medium;
 
   cursor: pointer;
   white-space: nowrap;
   user-select: none;
 
-  transition: opacity 0.3s ease-in-out, transform 0.1s ease-in-out;
+  transition: 
+    background-color 0.3s ease-in-out, 
+    opacity 0.3s ease-in-out, 
+    transform 0.1s ease-in-out;
 
   &--operator {
     background-color: $clr-btn-operator;
-  }
 
-  &--function {
-    background-color: $clr-btn-function;
+    @include hover-effect($clr-btn-operator);
+
+    &.btn--active {
+      background-color: $clr-white;
+      color: $clr-btn-operator;
+
+      @include hover-effect($clr-btn-operator, 30%, 0.8)
+    }
   }
 
   &--number {
     background-color: $clr-btn-number;
-  }
 
-  &:hover {
-    opacity: 0.8;
+    @include hover-effect($clr-btn-number)
+
+  } 
+
+  &--action {
+    color: $clr-black;
+    background-color: $clr-btn-action;
+
+    @include hover-effect($clr-btn-action)
   }
 
   &:active {

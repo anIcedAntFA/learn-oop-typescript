@@ -49,10 +49,12 @@
   }
 }
 
-.actions {
+.keyboard {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: $spacer-base;
 
   width: 100%;
+
+ 
 }

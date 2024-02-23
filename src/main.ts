@@ -9,7 +9,7 @@ import { setupCounter } from './counter.ts';
 // import './array/array.ts';
 // import './array/1920-build-array-from-permutation.ts';
 import './calculator.ts';
-import BasicCalculator from './calculator.ts';
+import './models/Calculator.ts';
 
 // document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 //   <div>
