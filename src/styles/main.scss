@@ -1,0 +1,58 @@
+@use 'sass:color' as clr;
+@use './reset';
+@use './base';
+@use './variables' as *;
+@use './button';
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacer-medium;
+
+  outline: 4px solid clr.adjust($clr-primary, $lightness: 40%);
+  width: 480px;
+  height: 800px;
+  border: 8px solid clr.adjust($clr-bg, $lightness: 5%);
+  border-radius: $rounded-large;
+  padding: $spacer-medium;
+
+  background-color: $clr-bg;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: $spacer-medium;
+
+  width: 100%;
+  height: calc(100% * 2 / 5);
+
+  &__input {
+    font-size: $fs-large;
+    color: $clr-input;
+  }
+
+  &__output {
+    font-size: $fs-xxlarge;
+    color: $clr-output;
+  }
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacer-base;
+
+  width: 100%;
+}

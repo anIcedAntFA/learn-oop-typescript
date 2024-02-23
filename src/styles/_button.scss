@@ -1,0 +1,41 @@
+@use './variables' as *;
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: $spacer-base;
+
+  font-size: $fs-xlarge;
+  font-weight: $fw-semibold;
+
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+
+  transition: opacity 0.3s ease-in-out, transform 0.1s ease-in-out;
+
+  &--operator {
+    background-color: $clr-btn-operator;
+  }
+
+  &--function {
+    background-color: $clr-btn-function;
+  }
+
+  &--number {
+    background-color: $clr-btn-number;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

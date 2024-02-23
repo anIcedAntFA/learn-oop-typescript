@@ -3,7 +3,7 @@ interface IDrive {
 }
 
 abstract class Vehicle {
-  static numberOfVehicles: number = 0;
+  static numberOfVehicles: number;
   public make: string;
   public model: string;
   protected _price: number;
